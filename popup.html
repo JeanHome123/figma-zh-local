@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Figma 本地汉化</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="panel">
+      <header class="header">
+        <div class="app-icon" aria-hidden="true">
+          <span></span>
+        </div>
+        <div>
+          <h1>Figma 本地汉化</h1>
+          <p>离线 UI 文案助手</p>
+        </div>
+      </header>
+
+      <section class="settings" aria-label="扩展设置">
+        <label class="setting-row">
+          <span class="setting-title">启用汉化</span>
+          <input type="checkbox" data-key="enabled">
+        </label>
+
+        <label class="setting-row">
+          <span class="setting-title">文本节点翻译</span>
+          <input type="checkbox" data-key="translateTextNodes">
+        </label>
+
+        <label class="setting-row">
+          <span class="setting-title">属性文案翻译</span>
+          <input type="checkbox" data-key="translateAttributes">
+        </label>
+
+        <label class="setting-row">
+          <span class="setting-title">保守模式</span>
+          <input type="checkbox" data-key="conservativeMode">
+        </label>
+
+        <label class="setting-row">
+          <span class="setting-title">本地收集模式</span>
+          <input type="checkbox" data-key="collectUntranslated">
+        </label>
+
+        <label class="setting-row">
+          <span class="setting-title">调试日志</span>
+          <input type="checkbox" data-key="debugLog">
+        </label>
+      </section>
+
+      <section class="collector" aria-label="本地收集">
+        <div class="collector-count">
+          <span>候选数量</span>
+          <strong id="candidate-count">0</strong>
+        </div>
+        <div class="actions">
+          <button id="copy-candidates" type="button">复制候选列表</button>
+          <button id="clear-candidates" type="button">清空候选</button>
+        </div>
+        <p id="status" class="status" aria-live="polite"></p>
+      </section>
+
+      <p class="note">设置会自动保存，刷新 Figma 页面后生效。</p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>
