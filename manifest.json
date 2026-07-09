@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Figma 中文本地汉化",
+  "version": "0.1.0",
+  "description": "本地离线替换 Figma 网页版常见英文 UI 文案。",
+  "permissions": ["storage"],
+  "host_permissions": ["https://www.figma.com/*"],
+  "action": {
+    "default_title": "Figma 中文本地汉化",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.figma.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
