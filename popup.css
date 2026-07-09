@@ -1,0 +1,220 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 300px;
+  color: #111827;
+  background: #f2f3f5;
+  font: 13px/1.35 -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+}
+
+.panel {
+  min-height: 100%;
+  padding: 14px 8px 12px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 12px 12px;
+  border-bottom: 1px solid #d7d9dd;
+}
+
+.app-icon {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  flex: 0 0 auto;
+  border: 1px solid #d5d8df;
+  border-radius: 7px;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.96), rgba(245,247,250,.96)),
+    repeating-linear-gradient(0deg, transparent 0 5px, rgba(17,24,39,.08) 5px 6px);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.7);
+}
+
+.app-icon::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 7px;
+  width: 12px;
+  height: 15px;
+  border: 1.5px solid #9ca3af;
+  border-radius: 2px;
+  background: #fff;
+}
+
+.app-icon::after {
+  content: "";
+  position: absolute;
+  right: 5px;
+  top: 4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #f6c453;
+}
+
+.app-icon span {
+  position: absolute;
+  left: 11px;
+  top: 14px;
+  width: 12px;
+  height: 7px;
+  border: 1.5px solid #9ca3af;
+  border-top: 0;
+  border-radius: 0 0 8px 8px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 19px;
+  line-height: 1.15;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+p {
+  margin: 0;
+}
+
+.header p {
+  margin-top: 3px;
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.settings {
+  display: grid;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.setting-row,
+.collector {
+  background: #fff;
+  border: 1px solid #dfe2e7;
+  box-shadow: 0 1px 1px rgba(15,23,42,.03);
+}
+
+.setting-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 41px;
+  padding: 8px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.setting-title {
+  min-width: 0;
+  padding-right: 10px;
+  color: #0f172a;
+  font-size: 13px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  position: relative;
+  width: 43px;
+  height: 24px;
+  flex: 0 0 auto;
+  margin: 0;
+  border: 0;
+  border-radius: 999px;
+  background: #c7ccd4;
+  cursor: pointer;
+  transition: background-color .16s ease;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(15,23,42,.24);
+  transition: transform .16s ease;
+}
+
+input[type="checkbox"]:checked {
+  background: #22c55e;
+}
+
+input[type="checkbox"]:checked::before {
+  transform: translateX(19px);
+}
+
+input[type="checkbox"]:focus-visible {
+  outline: 2px solid rgba(34,197,94,.35);
+  outline-offset: 2px;
+}
+
+.collector {
+  margin-top: 9px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.collector-count {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #0f172a;
+  font-weight: 700;
+}
+
+#candidate-count {
+  min-width: 28px;
+  height: 22px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  color: #16a34a;
+  background: #eaf8ef;
+  text-align: center;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+button {
+  height: 30px;
+  border: 1px solid #d9dde4;
+  border-radius: 4px;
+  color: #111827;
+  background: #f8fafc;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:active {
+  background: #edf0f4;
+}
+
+.status {
+  min-height: 17px;
+  margin-top: 7px;
+  color: #16a34a;
+  font-size: 12px;
+}
+
+.note {
+  margin: 9px 4px 0;
+  color: #6b7280;
+  font-size: 11px;
+}
